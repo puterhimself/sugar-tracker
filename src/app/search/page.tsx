@@ -1,12 +1,12 @@
-'use client'
-import React, { useState } from 'react';
-import { Search } from 'lucide-react';
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+"use client";
+import React, { useState } from "react";
+import { Search } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 const SugarRatingApp = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [sugarInfo, setSugarInfo] = useState<any>();
 
   const handleSearch = () => {
@@ -15,15 +15,15 @@ const SugarRatingApp = () => {
     const mockData = {
       name: searchTerm,
       sugarPer100g: Math.floor(Math.random() * 20),
-      sugarLevel: ['Low', 'Medium', 'High'][Math.floor(Math.random() * 3)]
+      sugarLevel: ["Low", "Medium", "High"][Math.floor(Math.random() * 3)],
     };
     setSugarInfo(mockData);
   };
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Sugar Rating App</h1>
-      <div className="flex gap-2 mb-4">
+      <h1 className="mb-4 text-2xl font-bold">Sugar Rating App</h1>
+      <div className="mb-4 flex gap-2">
         <Input
           type="text"
           placeholder="Search for a product"
